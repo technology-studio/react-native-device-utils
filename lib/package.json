@@ -24,5 +24,6 @@
   "dependencies": {
   },
   "peerDependencies": {
+    "react-native-device-info": "^0.24.3"
   }
 }
