@@ -1,6 +1,6 @@
 {
   "name": "@txo/react-native-device-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Technology Studio - React native device utils",
   "main": "index.js",
   "repository": {
@@ -33,7 +33,7 @@
     }
   },
   "dependencies": {
-    "react-native-keychain": "^3.0.0"
+    "uuid-by-string": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -58,7 +58,8 @@
     "jest": "^23.6.0",
     "react": "16.6.3",
     "react-native": "^0.57.8",
-    "react-native-device-info": "^0.24.3"
+    "react-native-device-info": "^0.24.3",
+    "react-native-keychain": "^3.0.0"
   },
   "jest": {
     "testMatch": [
