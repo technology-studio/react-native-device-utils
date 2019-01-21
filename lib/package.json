@@ -1,6 +1,6 @@
 {
   "name": "@txo/react-native-device-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Technology Studio - React native device utils",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -25,7 +25,7 @@
     "uuid-by-string": "^2.0.1"
   },
   "peerDependencies": {
-    "react-native-device-info": "^0.24.3",
+    "react-native-device-info": "^0.25.1",
     "react-native-keychain": "^3.0.0",
     "react-native": "*"
   }
