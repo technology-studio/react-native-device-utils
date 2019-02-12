@@ -1,6 +1,6 @@
 {
   "name": "@txo/react-native-device-utils",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Technology Studio - React native device utils",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -22,10 +22,10 @@
     "republish": "npm unpublish $(cat package.json | jq -r '.name')@$(cat package.json | jq -r '.version') && yarn publish --new-version $(cat package.json | jq -r '.version')"
   },
   "dependencies": {
-    "uuid-by-string": "^2.0.1"
+    "uuid-by-string": "^2.1.0"
   },
   "peerDependencies": {
-    "react-native-device-info": "^0.25.1",
+    "react-native-device-info": "^0.26.2",
     "react-native-keychain": "^3.0.0",
     "react-native": "*"
   }
