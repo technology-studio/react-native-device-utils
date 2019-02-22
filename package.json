@@ -1,6 +1,6 @@
 {
   "name": "@txo/react-native-device-utils",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Technology Studio - React native device utils",
   "main": "index.js",
   "repository": {
@@ -33,7 +33,7 @@
     }
   },
   "dependencies": {
-    "uuid-by-string": "^2.1.0"
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
