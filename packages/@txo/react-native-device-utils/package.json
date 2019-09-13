@@ -2,7 +2,7 @@
   "name": "@txo/react-native-device-utils",
   "version": "2.1.0",
   "description": "Technology Studio - React native device utils",
-  "main": "index.js",
+  "main": "lib/index.js",
   "typings": "index.d.ts",
   "repository": {
     "type": "git",
@@ -19,15 +19,19 @@
     "registry": "https://npm.technologystudio.sk"
   },
   "scripts": {
-    "republish": "npm unpublish $(cat package.json | jq -r '.name')@$(cat package.json | jq -r '.version') && yarn publish --new-version $(cat package.json | jq -r '.version')"
+    "republish": "npm unpublish $(cat package.json | jq -r '.name')@$(cat package.json | jq -r '.version') && yarn publish --new-version $(cat package.json | jq -r '.version')",
+    "build": "yarn build:clean && yarn build:lib && yarn build:flow",
+    "build:clean": "yarn rimraf lib",
+    "build:lib": "yarn babel src --out-dir lib --ignore **/__tests__/**",
+    "build:flow": "yarn flow-copy-source -i '**/__tests__/**' src lib",
+    "prepare": "yarn build"
   },
   "dependencies": {
     "ios-device-list": "^1.1.32",
     "uuid": "^3.3.2"
   },
   "peerDependencies": {
-    "react-native": "*",
-    "react-native-device-info": "^2.1.1",
+    "react-native-device-info": "^3.0.1",
     "react-native-keychain": "^3.1.3"
   }
 }

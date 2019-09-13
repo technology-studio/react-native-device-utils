@@ -17,4 +17,5 @@ declare module 'react-native' {
   declare export var Platform: {
     OS: string,
   };
+  declare export var NativeModules: any;
 }

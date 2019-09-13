@@ -1,0 +1,33 @@
+{
+  "name": "@txo-peer-dep/react-native-device-utils",
+  "version": "1.0.0",
+  "description": "Technology Studio - React native device utils",
+  "main": "lib/index.js",
+  "typings": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/technology-studio/react-native-device-utils.git"
+  },
+  "author": {
+    "name": "Technology Studio",
+    "email": "npm@technologystudio.sk",
+    "url": "https://bitbucket.org/technology-studio/"
+  },
+  "license": "UNLICENSED",
+  "private": false,
+  "publishConfig": {
+    "registry": "https://npm.technologystudio.sk"
+  },
+  "scripts": {
+    "republish": "npm unpublish $(cat package.json | jq -r '.name')@$(cat package.json | jq -r '.version') && yarn publish --new-version $(cat package.json | jq -r '.version')",
+    "build": "yarn build:clean && yarn build:lib && yarn build:flow",
+    "build:clean": "yarn rimraf lib",
+    "build:lib": "yarn babel src --out-dir lib --ignore **/__tests__/**",
+    "build:flow": "yarn flow-copy-source -i '**/__tests__/**' src lib",
+    "prepare": "yarn build"
+  },
+  "dependencies": {
+  },
+  "peerDependencies": {
+  }
+}

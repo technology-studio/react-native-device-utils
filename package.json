@@ -1,8 +1,5 @@
 {
-  "name": "@txo/react-native-device-utils",
-  "version": "2.1.0",
   "description": "Technology Studio - React native device utils",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://bitbucket.org/technology-studio/react-native-device-utils.git"
@@ -24,43 +21,49 @@
     "lintdiff": "git diff --name-only --cached --relative | grep '\\.js$' | eslint --cache --format=node_modules/eslint-formatter-pretty",
     "lint": "eslint --format=node_modules/eslint-formatter-pretty .",
     "fixcode": "eslint --format=node_modules/eslint-formatter-pretty . --fix",
-    "git-hook": "yarn -s lint"
+    "git-hook": "yarn -s lint && yarn flow check"
   },
+  "workspaces": [
+    "packages/@txo/*",
+    "packages/@txo-peer-dep/*"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "yarn run git-hook",
       "pre-push": "yarn run git-hook"
     }
   },
-  "dependencies": {
-    "ios-device-list": "^1.1.32",
-    "uuid": "^3.3.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.5.5",
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
     "@txo/babel-preset": "^1.0.0",
     "@txo/glow": "^1.2.3",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.0.2",
-    "babel-jest": "^24.8.0",
-    "eslint": "^6.1.0",
-    "eslint-config-txo-react": "^2.1.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "eslint": "^6.3.0",
+    "eslint-config-txo-react": "^3.0.0",
     "eslint-formatter-pretty": "^2.1.1",
-    "eslint-plugin-flowtype": "^3.13.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.14.1",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-standard": "^4.0.0",
-    "flow-bin": "^0.104.0",
-    "flow-typed": "^2.6.1",
-    "husky": "^3.0.2",
-    "jest": "^24.8.0",
-    "react": "^16.8.6",
-    "react-native": "^0.59.9",
-    "react-native-device-info": "^2.1.1",
-    "react-native-keychain": "^3.1.3"
+    "flow-bin": "^0.107.0",
+    "flow-copy-source": "^2.0.8",
+    "flow-typed": "^2.5.1",
+    "husky": "^3.0.5",
+    "jest": "^24.1.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-native-device-info": "^3.0.1",
+    "react-native-keychain": "^3.1.3",
+    "rimraf": "^3.0.0"
   },
   "jest": {
     "testMatch": [
@@ -72,7 +75,8 @@
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "<rootDir>/__tests__/Setup.js"
+      "<rootDir>/__tests__/Setup.js",
+      "<rootDir>/__tests__/Utils/"
     ],
     "setupFiles": [
       "<rootDir>/__tests__/Setup"

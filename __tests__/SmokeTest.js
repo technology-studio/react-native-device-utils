@@ -6,8 +6,6 @@
  * @flow
  */
 
-'use strict'; // eslint-disable-line
-
 test('shoud pass', () => {
   expect(true).toBe(true)
 })
