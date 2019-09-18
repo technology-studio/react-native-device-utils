@@ -73,13 +73,13 @@ export const _resetUniqueDeviceId = ({ iosKeychainAccessGroup }: DeviceConfig) =
   }
 }
 
-export const getDeviceName = DeviceInfo.getDeviceName
+export const getDeviceName: () => string = DeviceInfo.getDeviceNameSync
 
-export const getDeviceModel = () => {
+export const getDeviceModel = (): string => {
   if (Platform.OS === 'ios') {
     const deviceId = DeviceInfo.getDeviceIdSync()
     const iosDeviceModel: ?string = iosDevices.generationByIdentifier(deviceId)
     return iosDeviceModel || `Not mapped (${deviceId})`
   }
-  return DeviceInfo.getModel()
+  return DeviceInfo.getModelSync()
 }
