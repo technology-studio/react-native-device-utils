@@ -83,3 +83,12 @@ export const getDeviceModel = (): string => {
   }
   return DeviceInfo.getModelSync()
 }
+
+var _isTablet
+
+export const isTablet = (): boolean => {
+  if (typeof _isTablet !== 'boolean') {
+    _isTablet = DeviceInfo.isTabletSync()
+  }
+  return _isTablet
+}
