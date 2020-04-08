@@ -1,6 +1,6 @@
 {
   "name": "@txo/react-native-device-utils",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Technology Studio - React native device utils",
   "main": "lib/index.js",
   "typings": "index.d.ts",
