@@ -9,7 +9,7 @@
 import * as Keychain from 'react-native-keychain'
 import DeviceInfo from 'react-native-device-info'
 import { Platform } from 'react-native'
-import uuidv3 from 'uuid/v3'
+import { v3 as uuidv3 } from 'uuid'
 import iosDevices from 'ios-device-list'
 
 const KEYCHAIN_USERNAME_DEVICE_ID = 'deviceId'
