@@ -31,7 +31,7 @@ export const getUniqueDeviceId = ({ iosKeychainAccessGroup }: DeviceConfig): Pro
         accessGroup: iosKeychainAccessGroup,
       }).then((credentials) => {
         if (typeof credentials !== 'object') {
-          const newDeviceId = DeviceInfo.getUniqueIdSync()
+          const newDeviceId = DeviceInfo.getUniqueId()
           deviceId = newDeviceId
           return Keychain.setGenericPassword(KEYCHAIN_USERNAME_DEVICE_ID, newDeviceId, {
             service: KEYCHAIN_SERVICE_DEVICE_ID,
@@ -44,7 +44,7 @@ export const getUniqueDeviceId = ({ iosKeychainAccessGroup }: DeviceConfig): Pro
       })
     }
   }
-  return Promise.resolve(uuidv3(DeviceInfo.getUniqueIdSync(), uuidv3.DNS))
+  return Promise.resolve(uuidv3(DeviceInfo.getUniqueId(), uuidv3.DNS))
 }
 
 export const getPlatformKey = (): string => {
@@ -52,11 +52,11 @@ export const getPlatformKey = (): string => {
 }
 
 export const getPlatformVersion = (): string => {
-  return DeviceInfo.getSystemVersionSync()
+  return DeviceInfo.getSystemVersion()
 }
 
 export const getApplicationVersion = (): string => {
-  return DeviceInfo.getVersionSync()
+  return DeviceInfo.getVersion()
 }
 
 export const _resetUniqueDeviceId = ({ iosKeychainAccessGroup }: DeviceConfig) => {
@@ -77,18 +77,18 @@ export const getDeviceName: () => string = DeviceInfo.getDeviceNameSync
 
 export const getDeviceModel = (): string => {
   if (Platform.OS === 'ios') {
-    const deviceId = DeviceInfo.getDeviceIdSync()
+    const deviceId = DeviceInfo.getDeviceId()
     const iosDeviceModel: ?string = iosDevices.generationByIdentifier(deviceId)
     return iosDeviceModel || `Not mapped (${deviceId})`
   }
-  return DeviceInfo.getModelSync()
+  return DeviceInfo.getModel()
 }
 
 var _isTablet
 
 export const isTablet = (): boolean => {
   if (typeof _isTablet !== 'boolean') {
-    _isTablet = DeviceInfo.isTabletSync()
+    _isTablet = DeviceInfo.isTablet()
   }
   return _isTablet
 }
