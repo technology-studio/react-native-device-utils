@@ -1,6 +1,7 @@
 # OSX
 #
 .DS_Store
+.npmrc
 
 # node.js
 #
@@ -8,3 +9,4 @@ node_modules/
 npm-debug.log
 yarn-error.log
 lib
+coverage

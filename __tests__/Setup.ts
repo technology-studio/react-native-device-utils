@@ -1,13 +1,13 @@
 /**
- * @Author: Rostislav Simonik <rostislav.simonik>
- * @Date:   2018-01-30T15:49:24+01:00
- * @Email:  rostislav.simonik@technologystudio.sk
+ * @Author: Ondrej Mikulas <ondrej.mikulas@technologystudio.sk>
+ * @Date: 2020-07-31T12:07:89+02:00
  * @Copyright: Technology Studio
- * @flow
- */
+**/
 
 import { configure } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
+
+import './Config/LogConfig'
 
 configure({ adapter: new Adapter() })
 

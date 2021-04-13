@@ -1,12 +1,7 @@
 {
   "extends": [
-    "txo-react",
+    "txo-typescript",
     "plugin:jest/recommended"
   ],
-  "parser": "babel-eslint",
-  "settings": {
-    "react": {
-      "version": "16.9"
-    }
-  }
+  "parser": "@typescript-eslint/parser"
 }
