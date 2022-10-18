@@ -6,7 +6,15 @@
 **/
 
 import * as Keychain from 'react-native-keychain'
-import DeviceInfo from 'react-native-device-info'
+import {
+  getUniqueIdSync,
+  getSystemVersion,
+  getVersion,
+  getDeviceNameSync,
+  getDeviceId,
+  getModel,
+  isTablet as deviceInfoIsTablet,
+} from 'react-native-device-info'
 import { Platform } from 'react-native'
 import { v3 as uuidv3 } from 'uuid'
 import iosDevices from 'ios-device-list'
@@ -30,12 +38,12 @@ export const getUniqueDeviceId = async ({ iosKeychainAccessGroup }: DeviceConfig
         accessGroup: iosKeychainAccessGroup,
       }).then((credentials) => {
         if (typeof credentials !== 'object') {
-          const newDeviceId = DeviceInfo.getUniqueId()
+          const newDeviceId = getUniqueIdSync()
           deviceId = newDeviceId
           return Keychain.setGenericPassword(KEYCHAIN_USERNAME_DEVICE_ID, newDeviceId, {
             service: KEYCHAIN_SERVICE_DEVICE_ID,
             accessGroup: iosKeychainAccessGroup,
-          }).then(() => newDeviceId)
+          }).then(async () => newDeviceId)
         } else {
           deviceId = credentials.password
           return deviceId
@@ -43,20 +51,14 @@ export const getUniqueDeviceId = async ({ iosKeychainAccessGroup }: DeviceConfig
       })
     }
   }
-  return Promise.resolve(uuidv3(DeviceInfo.getUniqueId(), uuidv3.DNS))
+  return Promise.resolve(uuidv3(getUniqueIdSync(), uuidv3.DNS))
 }
 
-export const getPlatformKey = (): string => {
-  return Platform.OS
-}
+export const getPlatformKey = (): string => Platform.OS
 
-export const getPlatformVersion = (): string => {
-  return DeviceInfo.getSystemVersion()
-}
+export const getPlatformVersion = (): string => getSystemVersion()
 
-export const getApplicationVersion = (): string => {
-  return DeviceInfo.getVersion()
-}
+export const getApplicationVersion = (): string => getVersion()
 
 export const _resetUniqueDeviceId = ({ iosKeychainAccessGroup }: DeviceConfig): void => {
   if (Platform.OS === 'ios') {
@@ -72,22 +74,22 @@ export const _resetUniqueDeviceId = ({ iosKeychainAccessGroup }: DeviceConfig): 
   }
 }
 
-export const getDeviceName: () => string = DeviceInfo.getDeviceNameSync
+export const getDeviceName: () => string = getDeviceNameSync
 
 export const getDeviceModel = (): string => {
   if (Platform.OS === 'ios') {
-    const deviceId = DeviceInfo.getDeviceId()
+    const deviceId = getDeviceId()
     const iosDeviceModel: string | null = iosDevices.generationByIdentifier(deviceId)
     return iosDeviceModel ?? `Not mapped (${deviceId})`
   }
-  return DeviceInfo.getModel()
+  return getModel()
 }
 
 let _isTablet: boolean | undefined
 
 export const isTablet = (): boolean => {
   if (typeof _isTablet !== 'boolean') {
-    _isTablet = DeviceInfo.isTablet()
+    _isTablet = deviceInfoIsTablet()
   }
   return !!_isTablet
 }
