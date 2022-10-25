@@ -52,7 +52,7 @@
     "@txo-peer-dep/log": "^4.0.0",
     "@txo/log-console": "^3.0.0",
     "@types/jest": "^29.2.0",
-    "@types/react": "^18.0.22",
+    "@types/react": "^18.0.23",
     "@types/react-dom": "^18.0.7",
     "@types/react-native": "^0.70.6",
     "@types/uuid": "^8.3.4",
