@@ -1,3 +1,10 @@
+## [4.0.3](https://github.com/technology-studio/react-native-device-utils/compare/v4.0.2...v4.0.3) (2022-11-22)
+
+
+### Bug fixes
+
+* **deps:** update dependency ios-device-list to ^1.1.37 ([8bf74b0](https://github.com/technology-studio/react-native-device-utils/commit/8bf74b05d7d96846a9a7200270e983e133a56126))
+
 ## [4.0.2](https://github.com/technology-studio/react-native-device-utils/compare/v4.0.1...v4.0.2) (2022-10-27)
 
 
