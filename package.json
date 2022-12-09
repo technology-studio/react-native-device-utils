@@ -80,7 +80,7 @@
     "react-native": "0.70.6",
     "react-native-device-info": "^10.3.0",
     "react-native-keychain": "^8.1.1",
-    "redux-saga": "^1.2.1",
+    "redux-saga": "^1.2.2",
     "rimraf": "^3.0.2",
     "semantic-release": "^19.0.5",
     "semantic-release-slack-bot": "^3.5.3",
