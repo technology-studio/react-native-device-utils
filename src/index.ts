@@ -36,7 +36,7 @@ export const getUniqueDeviceId = async ({ iosKeychainAccessGroup }: DeviceConfig
       return Keychain.getGenericPassword({
         service: KEYCHAIN_SERVICE_DEVICE_ID,
         accessGroup: iosKeychainAccessGroup,
-      }).then((credentials) => {
+      }).then(async (credentials) => {
         if (typeof credentials !== 'object') {
           const newDeviceId = getUniqueIdSync()
           deviceId = newDeviceId
