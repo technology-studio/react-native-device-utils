@@ -30,17 +30,17 @@ export type DeviceConfig = {
 
 export const getUniqueDeviceId = async ({ iosKeychainAccessGroup }: DeviceConfig): Promise<string> => {
   if (Platform.OS === 'ios') {
-    if (deviceId) {
-      return Promise.resolve(deviceId)
+    if (deviceId != null && deviceId !== '') {
+      return await Promise.resolve(deviceId)
     } else {
-      return Keychain.getGenericPassword({
+      return await Keychain.getGenericPassword({
         service: KEYCHAIN_SERVICE_DEVICE_ID,
         accessGroup: iosKeychainAccessGroup,
       }).then(async (credentials) => {
         if (typeof credentials !== 'object') {
           const newDeviceId = getUniqueIdSync()
           deviceId = newDeviceId
-          return Keychain.setGenericPassword(KEYCHAIN_USERNAME_DEVICE_ID, newDeviceId, {
+          return await Keychain.setGenericPassword(KEYCHAIN_USERNAME_DEVICE_ID, newDeviceId, {
             service: KEYCHAIN_SERVICE_DEVICE_ID,
             accessGroup: iosKeychainAccessGroup,
           }).then(async () => newDeviceId)
@@ -51,7 +51,7 @@ export const getUniqueDeviceId = async ({ iosKeychainAccessGroup }: DeviceConfig
       })
     }
   }
-  return Promise.resolve(uuidv3(getUniqueIdSync(), uuidv3.DNS))
+  return await Promise.resolve(uuidv3(getUniqueIdSync(), uuidv3.DNS))
 }
 
 export const getPlatformKey = (): string => Platform.OS
