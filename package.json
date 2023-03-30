@@ -39,7 +39,7 @@
   },
   "peerDependencies": {
     "react-native": "*",
-    "react-native-device-info": "^10.4.0",
+    "react-native-device-info": "^10.5.1",
     "react-native-keychain": "^8.1.1"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "@txo-peer-dep/log": "^4.0.0",
     "@txo/log-console": "^3.0.0",
     "@types/jest": "^29.5.0",
-    "@types/react": "^18.0.30",
+    "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
     "@types/react-native": "^0.71.5",
     "@types/uuid": "^9.0.1",
@@ -77,8 +77,8 @@
     "lint-staged": "^13.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.71.4",
-    "react-native-device-info": "^10.4.0",
+    "react-native": "0.71.5",
+    "react-native-device-info": "^10.5.1",
     "react-native-keychain": "^8.1.1",
     "redux-saga": "^1.2.3",
     "rimraf": "^4.4.1",
