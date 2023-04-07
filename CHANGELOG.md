@@ -1,3 +1,10 @@
+## [4.0.4](https://github.com/technology-studio/react-native-device-utils/compare/v4.0.3...v4.0.4) (2023-04-07)
+
+
+### Bug fixes
+
+* **deps:** update dependency react-native-device-info to ^10.6.0 ([3f36a7d](https://github.com/technology-studio/react-native-device-utils/commit/3f36a7dfd87b33a4a86a20194d5dccae650e042a))
+
 ## [4.0.3](https://github.com/technology-studio/react-native-device-utils/compare/v4.0.2...v4.0.3) (2022-11-22)
 
 
