@@ -43,8 +43,8 @@
     "react-native-keychain": "^8.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.0",
-    "@babel/preset-env": "^7.22.20",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
     "@txo-peer-dep/log": "^4.0.2",
     "@txo/commitlint": "^1.0.2",
     "@txo/log-console": "^3.0.0",
