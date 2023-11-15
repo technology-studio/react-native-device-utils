@@ -1,20 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["esnext"],
-    "strict": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noEmit": true,
-    "declaration": false,
-    "esModuleInterop": true,
-    "alwaysStrict": true,
     "skipLibCheck": true,
-    "strictBindCallApply": true,
-    "strictFunctionTypes": true,
-    "sourceMap": true,
     "typeRoots": [
       "./types",
       "node_modules/@types"
     ]
-  }
+  },
+  "extends": "@txo/tsconfig"
 }
