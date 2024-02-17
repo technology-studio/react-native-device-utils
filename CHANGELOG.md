@@ -1,3 +1,10 @@
+## [4.0.11](https://github.com/technology-studio/react-native-device-utils/compare/v4.0.10...v4.0.11) (2024-02-17)
+
+
+### Bug fixes
+
+* **deps:** update dependency react-native-keychain to ^8.1.3 ([7832515](https://github.com/technology-studio/react-native-device-utils/commit/78325159173249f6e1067d133e0b73285cf06d00))
+
 ## [4.0.10](https://github.com/technology-studio/react-native-device-utils/compare/v4.0.9...v4.0.10) (2023-11-28)
 
 
