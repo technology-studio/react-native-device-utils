@@ -65,7 +65,7 @@
     "react-native-device-info": "^10.13.2",
     "react-native-keychain": "^8.2.0",
     "redux-saga": "^1.3.0",
-    "rimraf": "^5.0.5",
+    "rimraf": "^5.0.6",
     "ts-jest": "^29.1.2",
     "typescript": "^5.4.5"
   }
