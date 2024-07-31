@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
     "@txo-peer-dep/log": "^4.0.4",
     "@txo/commitlint": "^1.0.15",
     "@txo/log-console": "^3.0.0",
