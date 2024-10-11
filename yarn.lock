@@ -8950,15 +8950,15 @@ react-is@^18.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
-react-native-device-info@^11.1.0:
-  version "11.1.0"
-  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-11.1.0.tgz#7db5c4e5a179dce761efac155a493aa0956a40ab"
-  integrity sha512-hzXJSObJdezEz0hF7MAJ3tGeoesuQWenXXt9mrQR9Mjb8kXpZ09rqSsZ/quNpJdZpQ3rYiFa3/0GFG5KNn9PBg==
+react-native-device-info@^13.1.0:
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-13.1.0.tgz#e5076088e7f1eddba5cf5693ab46210946382e3f"
+  integrity sha512-tje+yRDG4ue2K7uC862IhxX7wFoufwozSdqLuzLKA8X1b4zgfF6iXId0Da8c2qS6FtaMr+vTsBFrY7Gxo1wTew==
 
-react-native-keychain@^8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-keychain/-/react-native-keychain-8.2.0.tgz#aea82df37aacbb04f8b567a8e0e6d7292025610a"
-  integrity sha512-SkRtd9McIl1Ss2XSWNLorG+KMEbgeVqX+gV+t3u1EAAqT8q2/OpRmRbxpneT2vnb/dMhiU7g6K/pf3nxLUXRvA==
+react-native-keychain@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-keychain/-/react-native-keychain-9.0.0.tgz#d850984170ecb5b4ba4f7a55d02e61b425abdbc0"
+  integrity sha512-pANzNE3Rcr2vVRdJpxY4RV+VhLwV6xPchndeycqpmY+dUl0kCYOkzS7WuCS4TlXR4rLdQq07TmCgNXfyRGmVyw==
 
 react-native@0.75.4:
   version "0.75.4"
