@@ -1,3 +1,19 @@
+## [4.0.18](https://github.com/technology-studio/react-native-device-utils/compare/v4.0.17...v4.0.18) (2024-12-16)
+
+
+### CI
+
+* add lint command for CI ([#751](https://github.com/technology-studio/react-native-device-utils/issues/751)) ([6a54a4d](https://github.com/technology-studio/react-native-device-utils/commit/6a54a4df231581d582400e9bf70d30eafeb930a5))
+* add synchronize to PR workflow ([#810](https://github.com/technology-studio/react-native-device-utils/issues/810)) ([9311f36](https://github.com/technology-studio/react-native-device-utils/commit/9311f36410a77eeb1d5238ada31b4914ca02669b))
+* rename workflows ([#768](https://github.com/technology-studio/react-native-device-utils/issues/768)) ([e6a4eb9](https://github.com/technology-studio/react-native-device-utils/commit/e6a4eb942263e1a6c874a1c7d1336644813bf68d))
+* update pr and release workflows ([#808](https://github.com/technology-studio/react-native-device-utils/issues/808)) ([51b6348](https://github.com/technology-studio/react-native-device-utils/commit/51b63488b16e0c91e93aad410636d3d4407520c6))
+* update URL for code-quality ([#761](https://github.com/technology-studio/react-native-device-utils/issues/761)) ([fab5164](https://github.com/technology-studio/react-native-device-utils/commit/fab51647872c4bd47b284e6d7762efa0a638621d))
+
+
+### Bug fixes
+
+* **deps:** update dependency uuid to v11 ([#803](https://github.com/technology-studio/react-native-device-utils/issues/803)) ([ea86f7e](https://github.com/technology-studio/react-native-device-utils/commit/ea86f7e5395121f0ca4074d8f65aa979b7084725))
+
 ## [4.0.17](https://github.com/technology-studio/react-native-device-utils/compare/v4.0.16...v4.0.17) (2024-06-11)
 
 
