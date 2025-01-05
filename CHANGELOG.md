@@ -1,3 +1,10 @@
+## [4.0.19](https://github.com/technology-studio/react-native-device-utils/compare/v4.0.18...v4.0.19) (2025-01-05)
+
+
+### Bug fixes
+
+* **deps:** update dependency uuid to ^11.0.4 ([#831](https://github.com/technology-studio/react-native-device-utils/issues/831)) ([759db33](https://github.com/technology-studio/react-native-device-utils/commit/759db33ed7a3ace238ec6e9798793c3d7d1004fd))
+
 ## [4.0.18](https://github.com/technology-studio/react-native-device-utils/compare/v4.0.17...v4.0.18) (2024-12-16)
 
 
