@@ -1,0 +1,5 @@
+[
+  "@typescript-eslint/no-magic-numbers",
+  "@typescript-eslint/prefer-destructuring",
+  "@typescript-eslint/init-declarations"
+]
